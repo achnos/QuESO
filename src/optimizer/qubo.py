@@ -20,14 +20,11 @@ from typing import Any
 import dimod
 import numpy as np
 
+from util import mu
+
 from .preprocess import PreprocessingResult
 
 DEFAULT_PENALTY_MULTIPLIER = 2.0
-
-
-def mu(n: int, s: int, S: int) -> int:
-    """Flattening map"""
-    return n * (S + 1) + s
 
 
 def _auto_penalty(P_tilde: np.ndarray, S: int, multiplier: float) -> float:
