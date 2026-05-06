@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "qseat"
+name = "queso"
 version = "0.1.0"
 description = "QUBO-based office seating optimizer"
 readme = "README.md"
@@ -38,8 +38,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/achnos/qseat"
-Issues = "https://github.com/achnos/qseat/issues"
+Homepage = "https://github.com/achnos/queso"
+Issues = "https://github.com/achnos/queso/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/seating_optimizer"]
