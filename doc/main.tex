@@ -104,7 +104,7 @@
 	We do not give a formal definition of WQAP, but instead explain it in relation to the problem at hand. The WQAP consist of the following problem: given two graphs - a flow graph on entities and a distance graph on locations - find the assignment of entities to locations that maximizes flow between co-located entities. For our case this means
 	\begin{itemize}
 		\item \textbf{Flow graph:} employees as vertices, edge weights $P_{nm}$ - how much employees $n$ and $m$ need to be near each other.
-		\item \textbf{Distance graph}: seats as nodes, edge weights $A_{kl}$ - which seats are adjacent
+		\item \textbf{Distance graph}: seats as nodes, edge weights $A_{sv}$ - which seats are adjacent
 	\end{itemize}
 	WQAP is notoriously difficult even for moderate sizes. Exhaustive enumeration of solutions is an infeasible approach in any practical scale of input sizes, which is part of the motivation for attacking it with quantum-inspired solutions rather than exact solvers.
 	
@@ -423,7 +423,7 @@
 	with assigned seat $s^*$, and for each active employee $\hat{n}$ with original index 
 	$n$, the diagonal bias is
 	\begin{equation}
-	\Delta Q_{\mu\mu} = -\tilde{P}_{n^* n} A_{s^* v}, 
+	\Delta Q_{\mu\mu} = -\tilde{P}_{n^* m} A_{s^* v}, 
 	\qquad \mu = \hat{n} \cdot (S+1) + v,
 	\end{equation}
 	summed over all fixed employees $n^*$. These corrections are added to the diagonal 
